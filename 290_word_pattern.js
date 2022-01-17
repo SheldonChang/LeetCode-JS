@@ -22,6 +22,7 @@ var wordPattern = function(pattern, s) {
     if (obj.hasOwnProperty(pArr[i])) {
         if (sArr[i]!==obj[pArr[i]]) return false;
     } else {
+        if (Object.values(obj).includes(sArr[i])) return false;
         obj[pArr[i]] = sArr[i] ;
     }
   }
@@ -35,6 +36,4 @@ var wordPattern = function(pattern, s) {
   console.log(wordPattern('abba', "dog cat cat fish"));
   console.log(wordPattern('aaaa', 'dog cat cat dog'));
   console.log(wordPattern('abba', 'dog dog dog dog'));
-
-
 })();

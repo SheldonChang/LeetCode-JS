@@ -11,8 +11,8 @@ var singleNumber = function(nums) {
   let i=1, j = nums.length-1;
   let res = nums[0];
   while (i<=j) {
-    res ^= nums[i]
-    res ^= nums[j]
+    res ^= nums[i];
+    res ^= nums[j];
     i++;
     j--;
   }
